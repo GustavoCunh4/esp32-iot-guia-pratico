@@ -1,0 +1,20 @@
+# Arduino secrets
+**/arduino_secrets.h
+**/secrets.h
+
+# Arduino and PlatformIO generated files
+build/
+.pio/
+*.bin
+*.elf
+*.map
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Codex local folders
+work/
+outputs/
