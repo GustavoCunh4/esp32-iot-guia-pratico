@@ -9,19 +9,32 @@ Repositório didático em português para estudar sensores, atuadores, Wi-Fi, Bl
 
 ## O que existe neste repositório
 
-- [Conceitos de GPIO, digital, analógico e PWM](docs/00-conceitos-gpio.md)
-- [Pinagem proposta para ESP32-S3](docs/01-esp32-s3.md)
-- [Pinagem proposta para DOIT ESP32 DEVKIT V1](docs/02-doit-esp32.md)
-- [Segurança elétrica, datasheets e limitações](docs/03-seguranca-datasheets.md)
-- [Wi-Fi](docs/04-wifi.md)
-- [Bluetooth e BLE](docs/05-bluetooth.md)
-- [Arduino IoT Cloud pelo Arduino IDE](docs/06-arduino-iot-cloud.md)
-- [Solução de problemas](docs/07-solucao-de-problemas.md)
-- [Guias individuais dos componentes](docs/componentes/README.md)
-- `examples/esp32s3`: testes individuais para ESP32-S3.
-- `examples/doit-esp32`: testes individuais para DOIT ESP32.
-- `connectivity`: exemplos de Wi-Fi, BLE e Bluetooth Classic.
-- `cloud`: exemplos-base para Arduino IoT Cloud.
+- [Conceitos de GPIO, digital, analógico e PWM](documentacao/00_conceitos_gpio_digital_analogico_pwm.md)
+- [Pinagem proposta para ESP32-S3](documentacao/01_pinagem_esp32_s3.md)
+- [Pinagem proposta para DOIT ESP32 DEVKIT V1](documentacao/02_pinagem_doit_esp32_devkit_v1.md)
+- [Segurança elétrica, datasheets e limitações](documentacao/03_seguranca_eletrica_e_datasheets.md)
+- [Wi-Fi](documentacao/04_conectar_wifi.md)
+- [Bluetooth e BLE](documentacao/05_conectar_bluetooth_e_ble.md)
+- [Arduino IoT Cloud pelo Arduino IDE](documentacao/06_usar_arduino_iot_cloud.md)
+- [Solução de problemas](documentacao/07_solucao_de_problemas.md)
+- [Guias individuais dos componentes](documentacao/componentes/README.md)
+- `testes-componentes/esp32-s3`: testes individuais para ESP32-S3.
+- `testes-componentes/doit-esp32-devkit-v1`: testes individuais para DOIT ESP32.
+- `conectividade`: Wi-Fi, servidor web, BLE e Bluetooth Classic.
+- `arduino-iot-cloud`: exemplos Cloud com arquivos separados e em arquivo único.
+
+Os nomes de pastas e sketches estão em português e descrevem a finalidade do teste. Os caminhos não usam acentos nem espaços para evitar incompatibilidades entre Arduino IDE, sistemas operacionais e ferramentas de linha de comando.
+
+## Arquivo único ou arquivos separados
+
+Os testes de componentes, procura de Wi-Fi e Bluetooth já usam somente um `.ino`.
+
+Exemplos que precisam de credenciais oferecem duas versões:
+
+- **`arquivo_unico`**: configuração e código no mesmo `.ino`, mais próximo do uso básico na Arduino IDE;
+- **`segredos_separados` ou `arquivos_separados`**: mantém senhas e propriedades em `.h`, opção recomendada para GitHub.
+
+As alternativas ficam em pastas diferentes porque a Arduino IDE compila todos os `.ino` encontrados na mesma pasta.
 
 ## Componentes cobertos
 
@@ -51,9 +64,9 @@ Wi-Fi, `WebServer`, BLE e `BluetoothSerial` fazem parte do pacote de placas ESP3
 
 ## Como executar um teste
 
-1. Leia primeiro o guia do componente em `docs/componentes`.
+1. Leia primeiro o guia do componente em `documentacao/componentes`.
 2. Escolha a pasta da sua placa.
-3. Abra o arquivo `.ino` dentro da pasta do teste.
+3. Abra o arquivo `.ino` dentro da pasta do teste. O arquivo principal tem o mesmo nome da pasta, como exigido pela Arduino IDE.
 4. Confira todos os GPIOs e tensões.
 5. Faça a montagem com a placa desligada.
 6. Compile, envie e abra o Monitor Serial em **115200 baud**.

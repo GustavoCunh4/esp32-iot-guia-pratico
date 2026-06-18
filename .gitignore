@@ -1,5 +1,6 @@
 # Arduino secrets
 **/arduino_secrets.h
+**/segredos_arduino.h
 **/secrets.h
 
 # Arduino and PlatformIO generated files
