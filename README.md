@@ -1,5 +1,7 @@
 # Guia prático de IoT com ESP32 e ESP32-S3
 
+Comecei a organizar este material enquanto estudava e ensinava os fundamentos de ESP32 no dia a dia com IoT/embarcado. Não é a documentação de um projeto único, é referência de consulta: quando preciso lembrar a pinagem de um componente ou como configurar Wi-Fi/Bluetooth numa das duas placas, procuro aqui em vez de reconstruir do zero. A organização é por placa de propósito, não por acaso — DOIT ESP32 e ESP32-S3 numeram os mesmos pinos físicos de forma diferente, então um exemplo escrito para uma placa liga o sensor no GPIO errado se copiado direto para a outra sem checar o mapa. Separar por variante evita esse erro, que costuma ser silencioso (o código compila e às vezes até roda, só que lendo o pino errado).
+
 Repositório didático em português para estudar sensores, atuadores, Wi-Fi, Bluetooth e Arduino IoT Cloud usando duas placas diferentes:
 
 - **DOIT ESP32 DEVKIT V1**: ESP32 original, com Wi-Fi, BLE e Bluetooth Classic.
